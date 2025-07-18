@@ -109,12 +109,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 
 ````
 
----
-
-Once you paste that into `README.md`, run:
-
-```bash
-git add README.md
-git commit -m "Add complete project README"
-git push
-````
