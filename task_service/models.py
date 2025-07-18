@@ -1,11 +1,8 @@
 from django.db import models
 
 class Task(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=100)
     description = models.TextField(blank=True)
-    is_completed = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.title
+    completed = models.BooleanField(default=False)
+    attachment = models.FileField(upload_to='task_files/', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True) 
